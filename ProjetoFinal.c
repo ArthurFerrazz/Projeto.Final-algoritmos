@@ -6,7 +6,7 @@
 #include<stdio.h>
 #include<string.h>
 
-//Inicio da função main e variáveis
+//Inicio da funÃ§Ã£o main e variÃ¡veis
 int main (){
   int i, y, tipo_I, pagamento;
   int qtde_sessoes, qtde_pessoas[2], idade[100];
@@ -15,7 +15,7 @@ int main (){
   char sexo[100][20], filme[2][50];
   float inteira[100], meia[100], total;
   
-  //Solicitação da quantidade de sessoes permitindo apenas duas para dar continuidade.
+  //SolicitaÃ§Ã£o da quantidade de sessoes permitindo apenas duas para dar continuidade.
 do {
     printf ("Quantidade de sessoes: ");
     scanf ("%d", &qtde_sessoes);
@@ -25,7 +25,7 @@ while (qtde_sessoes != 2);
 
 // Loop criado para as duas sessoes
 for (i = 0; i < 2; i++){
-	//deixando os valores igual a 0, para os valores de cada sessão não se juntarem.
+	//deixando os valores igual a 0, para os valores de cada sessÃ£o nÃ£o se juntarem.
 	total = 0.0;
 	crianca = 0;
 	adolescente = 0;
@@ -38,32 +38,32 @@ for (i = 0; i < 2; i++){
 	qtde_inteira = 0;
 	qtde_meia = 0;
 	
-  	//Solicitação da quantidade de pessoas, permitindo no mínimo 10.  
+  	//SolicitaÃ§Ã£o da quantidade de pessoas, permitindo no mÃ­nimo 10.  
 	printf("\nQuantidade de pessoas que assistiram o filme: ");
 	scanf ("%d", &qtde_pessoas[i]);
-//aqui esá menor que 9 pois o contador começa do 0.	
+//aqui esÃ¡ menor que 9 pois o contador comeÃ§a do 0.	
 	while (qtde_pessoas[i] < 1){
 	printf("Valor invalido. Minimo 10 pessoas: ");
 	scanf ("%d", &qtde_pessoas[i]);
 }
-// Solicitação e armazenamento do nome do filme.
+// SolicitaÃ§Ã£o e armazenamento do nome do filme.
 	printf("\nNome do filme: ");
 	fflush(stdin);
 	fgets(filme[i], 50, stdin);
-//Outro loop criado com o valor da quantidade de pessoas por sessão.
+//Outro loop criado com o valor da quantidade de pessoas por sessÃ£o.
 for (y = 0; y <= qtde_pessoas[i]; y++){
 	printf ("\nSexo [M]asculino ou [F]eminino: ");
 	scanf ("%s", &sexo[y]);
 	fflush (stdin);
-//Se o sexo for masculino, adiciona à variável masculino
+//Se o sexo for masculino, adiciona Ã  variÃ¡vel masculino
   if (strcmp(sexo[y], "M") == 0){
     masculino++;
 }
-//Se o sexo for feminino, adiciona à variável feminino
+//Se o sexo for feminino, adiciona Ã  variÃ¡vel feminino
   else if (strcmp(sexo[y], "F") == 0){
 	feminino++;
 }
-//Caso não seja nenhum dos 2 a resposta é inválida e o usuario tera de repetir.
+//Caso nÃ£o seja nenhum dos 2 a resposta Ã© invÃ¡lida e o usuario tera de repetir.
   else{
   	while (strcmp(sexo[y],"F") != 0 && strcmp(sexo[y], "M") != 0){
 		printf ("Sexo invalido. Selecione: [M]asculino ou [F]eminino: ");
@@ -77,15 +77,15 @@ for (y = 0; y <= qtde_pessoas[i]; y++){
 }
  }
 } 
-//Solicitação e armazenamento da idade do cliente.
+//SolicitaÃ§Ã£o e armazenamento da idade do cliente.
 printf ("\nIdade: ");
 scanf ("%d", &idade[y]);
-//Enquanto a idade for menor que 3 e maior que 100 o usuario tem de repetir pois a idade mínima é 3 anos e a máxima é de 100 anos.
+//Enquanto a idade for menor que 3 e maior que 100 o usuario tem de repetir pois a idade mÃ­nima Ã© 3 anos e a mÃ¡xima Ã© de 100 anos.
 while ( idade[y] < 3 || idade[y] > 100 ){
 		printf("\n\nIdade invalida. Idade minima 3 anos e maxima 100 anos: ");
 		scanf ("%d", &idade[y]);
 }
-//Adicionando a idade nas respectivas faixas etárias, utilizando a mesma lógica, caso a idade inserida esteja dentro da condição é adicionada à variável.
+//Adicionando a idade nas respectivas faixas etÃ¡rias, utilizando a mesma lÃ³gica, caso a idade inserida esteja dentro da condiÃ§Ã£o Ã© adicionada Ã  variÃ¡vel.
 	if (idade[y] >= 3 && idade[y] <= 13){
 	    crianca++;
 }
@@ -98,7 +98,7 @@ while ( idade[y] < 3 || idade[y] > 100 ){
 	else if (idade[y] >= 65 && idade[y] <= 100){
 		idoso++;
 }
-//Já aqui, caso a idade seja maior que 18 e de acordo com o sexo escolhido, é adicionado as respectivas variáveis. "mascMaior" == homem maior de 18 e "femiMaior" == mulher maior de 18.
+//JÃ¡ aqui, caso a idade seja maior que 18 e de acordo com o sexo escolhido, Ã© adicionado as respectivas variÃ¡veis. "mascMaior" == homem maior de 18 e "femiMaior" == mulher maior de 18.
     if (idade[y] >= 18 && strcmp(sexo[y], "M") == 0){
 		mascMaior++;
 }
@@ -106,10 +106,10 @@ while ( idade[y] < 3 || idade[y] > 100 ){
 		femiMaior++; 
 }
 
-//Solicitação e armazenamento do tipo de ingresso comprado.
+//SolicitaÃ§Ã£o e armazenamento do tipo de ingresso comprado.
 printf("\nIngresso comprado: \n[1]INTEIRA - R$50,00\n[2]MEIA - R$25,00\n");
 scanf ("%d", &tipo_I);
-//Enquanto o tipo do ingresso for maior que 2 ou menor que 1 repete o processo pois só tem as opções 1 e 2.
+//Enquanto o tipo do ingresso for maior que 2 ou menor que 1 repete o processo pois sÃ³ tem as opÃ§Ãµes 1 e 2.
 while (tipo_I > 2 || tipo_I < 1){
 	printf("Ingresso Invalido, \n[1]INTEIRA - R$50,00\n[2]MEIA - R$25,00\n");
 	scanf ("%d", &tipo_I);
@@ -134,7 +134,7 @@ switch(pagamento){
 		
 }
 
-//Switch para o cálculo do valor arrecadado para cada tipo de ingresso comprado, e adição de 1 a variavel de quantidade.
+//Switch para o cÃ¡lculo do valor arrecadado para cada tipo de ingresso comprado, e adiÃ§Ã£o de 1 a variavel de quantidade.
   switch(tipo_I){
 	case 1:
 		qtde_inteira = qtde_inteira + 1;
@@ -152,17 +152,17 @@ switch(pagamento){
 
 	
 }
-//Dados de saída, contendo as informações solicitadas
+//Dados de saÃ­da, contendo as informaÃ§Ãµes solicitadas
 printf("\nO Filme: %s\nConteve na sessao %d Mulheres e %d Homens\n",filme[i],feminino, masculino);
 printf("Criancas de [3 a 13]: %d\nAdolescentes de [14 a 17]: %d\nAdultos de [18 a 64]: %d\nIdosos de [65 a 100]: %d\n", crianca, adolescente, adulto, idoso);
 printf("Homens maiores de 18 anos: %d\nMulheres maiores de 18 anos: %d\n",mascMaior, femiMaior);
 printf("\nValor total arrecadado na sessao: %2.f R$\n", total);
-//Comparação de vendas entre inteiras e meias, caso a quantidade de inteiras vender mais que a de meias e vice-versa, um printf será lançado.	
+//ComparaÃ§Ã£o de vendas entre inteiras e meias, caso a quantidade de inteiras vender mais que a de meias e vice-versa, um printf serÃ¡ lanÃ§ado.	
 	if (qtde_inteira > qtde_meia){
 		printf("\nNesta sessao se teve mais vendas de inteiras! ");
 }
 	else{
-		printf("Nesta sessao se teve mais vendas de meias!");
+		printf("Nesta sessao se teve mais vendas de meia entradas!");
 }
 
 
