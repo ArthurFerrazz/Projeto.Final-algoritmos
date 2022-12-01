@@ -15,7 +15,7 @@ int main (){
   char sexo[100][20], filme[2][50];
   float inteira[100], meia[100], total;
   
-  //Solicitação da quantidade de sessoes permitindo apenas duas para dar continuidade.
+ //Solicitação da quantidade de sessoes permitindo apenas duas para dar continuidade.
 do {
     printf ("Quantidade de sessoes: ");
     scanf ("%d", &qtde_sessoes);
