@@ -162,7 +162,7 @@ printf("\nValor total arrecadado na sessao: %2.f R$\n", total);
 		printf("\nNesta sessao se teve mais vendas de entradas inteiras! ");
 }
 	else{
-		printf("Nesta sessao se teve mais vendas de meias!");
+		printf("Nesta sessao se teve mais vendas de meia entradas!");
 }
 
 
