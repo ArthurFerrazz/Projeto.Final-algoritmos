@@ -153,6 +153,7 @@ switch(pagamento){
 	
 }
 //Dados de saída, contendo as informações solicitadas
+	
 printf("\nO Filme: %s\nConteve na sessao %d Mulheres e %d Homens\n",filme[i],feminino, masculino);
 printf("Criancas de [3 a 13]: %d\nAdolescentes de [14 a 17]: %d\nAdultos de [18 a 64]: %d\nIdosos de [65 a 100]: %d\n", crianca, adolescente, adulto, idoso);
 printf("Homens maiores de 18 anos: %d\nMulheres maiores de 18 anos: %d\n",mascMaior, femiMaior);
